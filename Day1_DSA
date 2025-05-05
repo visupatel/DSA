@@ -1,1 +1,35 @@
+// add two numbers wihout using addition symbol
+
+public class Main{
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        for(int i = 1; i <= b; i++){
+            a++;
+        }
+        System.out.println(a);
+    }
+}
+
+
+
+
+
+// Take a input from user using class and object
+
+import java.util.Scanner;
+class Person{
+    public void print(){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.println(a);
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.print();
+    }
+}
 
