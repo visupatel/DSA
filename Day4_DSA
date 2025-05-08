@@ -1,0 +1,386 @@
+// 8/5/2025
+
+// Take a input from user and print the relevent day
+// 1-->Monday
+// 2-->tuesday
+
+import java.util.*;
+public class Day4{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number 1 to 7: ");
+        int number = sc.nextInt();
+
+        switch (number) {
+            case 1:
+            System.out.println("Monday");
+            break;
+
+            case 2:
+            System.out.println("Tuesday");
+            break; 
+            
+            case 3:
+            System.out.println("Wednesday");
+            break; 
+            
+            case 4:
+            System.out.println("Thursday");
+            break; 
+            
+            case 5:
+            System.out.println("Friday");
+            break; 
+            
+            case 6:
+            System.out.println("Saturday");
+            break; 
+            
+            case 7:
+            System.out.println("Sunday");
+            break;
+        
+            default:
+            System.out.println("Not a valid day");
+                break;
+        }
+
+    }
+}
+
+
+
+// or Inhance switch case 
+
+
+import java.util.*;
+public class Day4{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number 1 to 7: ");
+
+        int number = sc.nextInt();
+
+        switch (number) {
+            case 1 -> System.out.println("Monday");
+
+            case 2 -> System.out.println("Tuesday");
+            
+            case 3 -> System.out.println("Wednesday");
+         
+            default -> System.out.println("Not a valid day");
+        }
+
+    }
+}
+
+
+
+
+
+
+
+// or using if else
+
+import java.util.*;
+public class Day4{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number 1 to 7: ");
+        int number = sc.nextInt();
+
+        if(number==1){
+            System.out.println("Monday ");
+        }else if(number == 2){
+            System.out.println("Tuesday");
+        }else if(number == 3){
+            System.out.println("Wednesday");
+        }else if(number == 4){
+            System.out.println("Thursday");
+        }else if(number == 5){
+            System.out.println("Friday");
+        }else if(number == 6){
+            System.out.println("Saturday");
+        }else if(number == 7){
+            System.out.println("Sunday");
+        }else{
+            System.out.println("Not a valid day");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// Ternary operator or Inhance if-else
+public class Day4{
+    public static void main(String[] args) {
+        int n=5;
+        String str=(n==5)?("yes"):("No");
+        System.out.println(str);
+    }
+}
+
+
+
+
+
+// Inhance for loop or for each loop
+
+public class Day4{
+    public static void main(String[] args) {
+     int arr[] ={1,2,3,4};
+     for(int i:arr){
+        System.out.println(i);
+     }
+    }
+}
+
+
+
+
+
+
+// write a program calculate sum till it become single digit
+
+public class Day4{
+    public static void main(String[] args) {
+     int num =79845623;
+     int res= 0;
+
+     while(num >= 10){
+
+        res = 0;
+     while(num != 0){
+        int rem = num % 10;
+        res = res + rem;
+        num = num/10;
+     }
+     num = res;
+    }
+     System.out.println(num);
+
+    }
+}
+
+
+
+
+
+// Reverse a number
+// 123-->321
+
+public class Day4{
+    public static void main(String[] args) {
+        int num = 123;
+        int res = 0;
+
+        while(num != 0){
+            int rem = num%10;
+            res= res * 10 + rem ;
+            num = num/10;
+        }
+        System.out.println(res);
+
+    }
+}
+
+
+
+
+
+
+
+// print the pattern
+/*  
+1
+12
+123
+1234
+12345  */
+
+
+public class Day4{
+    public static void main(String[] args) {
+        int n=4;
+        for(int i = 1; i <=n;i++){
+            for(int j = 1; j <= i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+
+        }
+    }
+}
+
+
+
+
+
+
+
+// print the pattern
+/*     1
+      123
+     12345
+    1234567  */
+
+public class Day4{
+    public static void main(String[] args) {
+        int n=4;
+        for(int i = 1; i <=n;i++){
+            for(int j = n-i; j >= 0;j--){  // Space
+                System.out.print(" ");
+            }
+
+            for(int j = 1; j <= 2*i-1; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+// PRINT pattern
+/*  
+
+*****
+****
+***
+**
+*
+
+ */
+
+ public class Day4{
+    public static void main(String[] args) {
+        int n = 5;
+        for(int i = n; i >= 1;i--){
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+ }
+
+
+
+
+
+//print a pattern
+
+public class Day4{
+    public static void main(String[] args) {
+        int n =5;
+        for(int i = n; i >= 1; i--){
+            for(int j = n-i; j >= 1;j--){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i - 1; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+
+        }
+    }
+}
+
+
+
+
+
+
+// Print a pattern
+/*
+*
+ **      
+  ***    
+   ****  
+    *****
+     ******
+      *******
+      *******
+     ******
+    *****
+   ****
+  ***
+ **
+*
+*/
+public class Day4{
+    public static void main(String[] args) {
+        int n = 7;
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= (i-1);j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = n; i >= 1; i--){
+            for(int j = 1; j <= (i-1);j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// print pattern
+/*
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+ */
+public class Day4{
+    public static void main(String[] args) {
+        int n = 5;
+        for(int i = 1; i <= n; i++){
+            for(int j = n - i; j >= 1; j--){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i = n-1; i >= 1; i--){
+            for(int j = n- i; j >= 1; j--){
+                System.out.print(" ");
+            }
+            for(int j = 1; j <= 2*i-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
