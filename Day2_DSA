@@ -1,1 +1,235 @@
 
+// print factorial of n numbers
+public class Recursion {
+    public static void printFact(int n,int res){
+
+        if(n==0 ||n==1){   // BASE CASE
+            System.out.println(res);
+            return;
+        }
+        res *= n;
+        printFact(n-1, res);
+
+    }
+    public static void main(String[] args) {
+        printFact(5, 1);
+    }
+}
+
+
+
+
+
+
+// Print factorial using recursion
+class Factorial{
+
+    public int printFact(int n, int res){
+        if(n == 0 || n == 1){
+            return res;
+        }
+            res *= n;
+            return printFact(n-1, res);
+        
+    }
+
+}
+public class Recursion{
+    public static void main(String[] args) {
+        Factorial f1 = new Factorial();
+        int res1 = f1.printFact(5,1);
+        System.out.println(res1);
+    }
+}
+
+
+
+
+
+
+// print a fibonacci series
+
+public class Recursion{
+
+    public static void printFibo(int i,int n, int n1, int n2, int res){
+        if(i >= n-2){
+              return;
+        }
+        res = n1 + n2;
+        System.out.println(res);
+        n1 = n2;
+        n2 = res;
+        printFibo(i+1,n, n1, n2, res);
+    }
+    public static void main(String[] args) {
+        int n1 = 0;
+        System.out.println(n1);
+        int n2 =  1;
+        System.out.println(n2);
+
+        printFibo(0,5, n1, n2, 1);
+    }
+}
+
+
+
+
+
+
+
+// Divide two numbers and when the result should get 0 return the denominator
+
+public class Recursion{
+    public static void main(String[] args) {
+        int a = 18;
+        int b = 12;
+        int c = a%b;
+        for(int i = 0; i<=1;i++){
+            if(a%b==0){
+                System.out.println(b);
+            }else{
+                a = b;
+                b = c;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+Divide two numbers and when the result should get 0 return the denominator using recursion
+
+class Person{
+    public static int printDemoninator(int a,int b){
+
+        if(b == 0){
+            return a;
+        }
+        else{
+            return printDemoninator(b, a%b);
+        }
+    }
+}
+    public class Recursion{
+    public static void main(String[] args) {
+      Person p1 = new Person();
+      int res = p1.printDemoninator(18, 9);
+      System.out.println(res);
+    }
+}
+
+
+
+
+
+
+
+// Divide two numbers and when the result should get 0 return the denominator using recursion
+
+public class Recursion{
+
+    public static void printDemoninator(int a, int b, int res){
+
+        if(a%b == 0){
+            System.out.println(b);
+            return;
+        }
+        a = b;
+        b = res;
+        printDemoninator(a, b, res);
+
+    }
+    public static void main(String[] args) {
+        int a = 100;
+        int b = 9;
+        int res = a%b;
+        printDemoninator(a, b, res);
+    }
+}
+
+
+
+
+
+
+
+
+// if - else 
+import java.util.*;
+public class Recursion{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first value: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second value: ");
+        int b = sc.nextInt();
+
+        if(a > b){
+            System.out.println(a+" is Grater than "+b);
+        } else{
+            System.out.println(b+" is Grater than "+a);
+
+        }
+    }
+}
+
+
+
+
+
+
+//  Print the Table
+
+public class Recursion{
+
+    public static void printTable(int n,int i){
+
+        if(i>10){
+            return;
+        }
+
+        System.out.println(n+" * "+i+" = "+(n*i));
+        printTable(n, i+1);
+        
+    }
+    public static void main(String[] args) {
+        printTable(2, 1);
+    }
+}
+
+
+
+
+
+
+// print fibonacci series
+
+public class Recursion{
+    public static void main(String[] args) {
+        int n = 5;
+        int n1 = 0;
+        int n2 = 1;
+        System.out.println(n1);
+        System.out.println(n2);
+        int result = 1;
+
+        for(int i = 1; i <= n - 2; i++){
+            result = n1 + n2;
+            System.out.println(result);
+            n1 = n2;
+            n2 = result;
+        }
+    }
+}
+
+
+
+
+
+
+
