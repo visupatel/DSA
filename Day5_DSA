@@ -1,0 +1,275 @@
+// Array
+
+import java.util.Arrays;
+
+public class Day5 {
+    public static void main(String[] args) {
+
+        int arr[]= {1,2,3,4,5};
+
+        // // using For loop
+        // for(int i=0; i<arr.length;i++){
+        //     System.out.println(arr[i]);
+        // }
+
+        // // using for each loop
+        // for(int i:arr){
+        //     System.out.println(i);
+        // }
+
+
+        // //for print array in clear format
+        // System.out.println(Arrays.toString(arr));
+
+
+        // //this give an error because toString contain only one argument
+        // System.out.println(Arrays.toString(arr+" "));
+    }
+}
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class Day5{
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int arr[] = new int[5];
+
+        for(int i = 0;i < arr.length;i++){
+            System.out.print("Enter the value: ");
+            arr[i] =  sc.nextInt();
+        }
+
+        for(int i = 0;i < arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+
+
+
+
+
+
+// Count odd value and even value
+
+import java.util.*;
+public class Day5{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter he sie: ");
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        int odd = 0;
+        int even = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.print("Enter the value: ");
+            arr[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < arr.length; i++){
+
+            if(arr[i]%2 == 0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        System.out.println("total odd is: "+odd);
+        System.out.print("total even is: "+even);
+
+    }
+}
+
+
+
+
+
+
+//print the heighest value of an array
+
+public class Day5{
+    public static void main(String[] args) {
+        int arr[] = {1,2,12,6,9,3};
+        int maxValue = arr[0];
+
+        for(int i = 1; i < arr.length; i++){
+            if(maxValue < arr[i]){
+                maxValue = arr[i];
+            }
+        }
+        System.out.println(maxValue);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//print the heighest and second heighest value of an array
+
+public class Day5{
+    public static void main(String[] args) {
+        int arr[] = {1,10,12,12,9,3};
+        int maxValue = arr[0];
+        int secondMaxValue = arr[0];
+
+        for(int i = 1; i < arr.length; i++){
+            if(maxValue < arr[i]){
+                maxValue = arr[i];
+            }
+           
+        }
+        for(int i = 0;i < arr.length;i++){
+            if(secondMaxValue < arr[i] && arr[i]!= maxValue){
+                secondMaxValue = arr[i];
+            }
+        }
+        
+          System.out.println("second heighest value: "+secondMaxValue);
+            System.out.println("First heights value: "+maxValue); 
+    }
+}
+
+
+
+
+
+
+
+//or
+
+public class Day5{
+    public static void main(String args[]){
+        int arr[]={1,2,10,12,3,9};
+        int max = arr[0];
+        int secondMax = arr[0];
+
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] > max){
+                secondMax = max;
+                max = arr[i];
+            }
+            else if(arr[i] > secondMax){
+                secondMax = arr[i];
+            }
+        }
+        System.out.println("heighest value: "+max);
+        System.out.println("second heighest value: "+secondMax);
+    }
+}
+
+
+
+
+
+
+
+Check wheather the given array is sorted or not if sorted then 
+check wheather the given elemenent is there are not
+Given array may have element only 1s and 0s Move all zeros to the right side
+[1,0,1,0,1,0] --> [1,1,1,0,0,0]
+
+
+// Check whether the given array is sorted or not if sorted then print it is sorted
+
+public class Day5{
+    public static void main(String[] args) {
+        int arr[] = {1,1,3,4,5};
+        boolean isSorted = true;
+
+        for(int i = 0; i < arr.length-1;i++){
+            if(arr[i] <= arr[i+1]){
+
+                isSorted = true;
+            }else{
+
+                isSorted = false;
+                break;
+            }
+        }
+        if(isSorted){
+            System.out.println("array is Sorted:");
+        }else{
+            System.out.println("array is not sorted:");
+        }
+    }
+}
+
+
+
+
+
+
+
+// check wheather the given element is there are not
+
+import java.util.*;
+public class Day5{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size: ");
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        for(int i = 0; i < arr.length; i++){
+            System.out.print("Enter value: ");
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter element which you want to find: ");
+        int x = sc.nextInt();
+        
+        for(int i = 0; i < arr.length; i++){
+            if(x == arr[i]){
+                System.out.println("Element is found at index: "+i);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+Given array may have element only 1s and 0s Move all zeros to the right side
+[1,0,1,0,1,0] --> [1,1,1,0,0,0]
+
+import java.util.Arrays;
+
+public class Day5{
+    public static void main(String[] args) {
+        int arr[] = {1,0,1,0,1,0};
+       for(int j = 0; j <= 1; j++){
+        for(int i = 0; i < arr.length-1; i++){
+            if(arr[i] == 0){
+                int temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+        }
+        System.out.println(Arrays.toString(arr));
+
+    }
+}
